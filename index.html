@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоомагазин</title>
+    <!-- Подключение Vue -->
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Подключение Bootstrap и CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+</head>
+<body>
+    <!-- Элемент к которому Vue монтирует приложение -->
+    <div id="app">
+        <header>
+            <h1 v-text="sitename"></h1>
+        </header>
+    </div>
+
+    <!-- Конструктор Vue -->
+    <script type="text/javascript">
+        var webstore = new Vue({
+            /* Селектор для точки входа в DOM */
+            el: '#app',
+            data: {
+                sitename: 'Зоомагазин'
+            }
+        });
+    </script>
+</body>
+</html>
