@@ -21,11 +21,60 @@
 
     <!-- Конструктор Vue -->
     <script type="text/javascript">
+        var APP_LOG_LIFECYCLE_EVENTS = true;/* Переменная функции обратного вызова */
         var webstore = new Vue({
             /* Селектор для точки входа в DOM */
             el: '#app',
             data: {
                 sitename: 'Зоомагазин'
+            },
+            /* Выводит событие beforeCreate */
+            beforeCreate: function(){
+                if (APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("beforeCreate");
+                }
+            },
+            /* Выводит событие created */
+            created: function(){
+                if (APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("created");
+                }
+            },
+            /* Выводит событие beforeMount */
+            beforeMount: function(){
+                if (APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("beforeMount");
+                }
+            },
+            /* Выводит событие mounted */
+            mounted: function(){
+                if(APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("mounted");
+                }
+            },
+            /* Выводит событие beforeUpdate */
+            beforeUpdate: function(){
+                if(APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("beforeUpdate");
+                }
+            },
+            /* Выводит событие updated */
+            updated: function(){
+                if(APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("updated");
+                }
+            },
+            /* Выводит событие beforeDestroy */
+            beforeDestroy: function(){
+                if(APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("beforeDestroy");
+                }
+            },
+            /* Выводит событие destroyed */
+            destroyed: function(){
+                if(APP_LOG_LIFECYCLE_EVENTS){
+                    console.log("destroyed");
+                }
             }
         });
     </script>
