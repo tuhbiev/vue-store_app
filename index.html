@@ -26,7 +26,14 @@
             /* Селектор для точки входа в DOM */
             el: '#app',
             data: {
-                sitename: 'Зоомагазин'
+                sitename: 'Зоомагазин',
+                product: {
+                    id: 1001,
+                    title: "Лакомство для кошек",
+                    description: "140 грамм <em>irresistible</em> Dreamies подушечки с курицей.",
+                    price: 140,
+                    image: "assets/image/dreamies.jpg"
+                }
             },
             /* Выводит событие beforeCreate */
             beforeCreate: function(){
